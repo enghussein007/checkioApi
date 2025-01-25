@@ -4,8 +4,19 @@ import jwt
 import datetime
 import mysql.connector as db
 from sha1encrypt import encrypt_password
+from fastapi.middleware.cors import CORSMiddleware
+
+
 
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 
 
 def get_db_connection():
