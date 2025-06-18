@@ -21,10 +21,10 @@ app.add_middleware(
 
 def get_db_connection():
     connection = db.connect(
-        host='localhost',
-        user='root',
-        password='',
-        database='check_io'
+        host= "sql200.infinityfree.com",   #'localhost',
+        user="if0_39263752",  #'root',
+        password="pEYMqZn4F3",   #'',
+        database= "if0_39263752_check_io"   #'check_io'
     )
     return connection
 
